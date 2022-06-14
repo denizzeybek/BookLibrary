@@ -1,0 +1,35 @@
+<template>
+<div class="card-container bg-offWhite rounded border border-purple-900 shadow-lg shadow-purple-500 h-96 min-w-52">
+
+    <div v-if="isMain == 'true'" class="header flex justify-center text-center pt-2 flex-col">
+        <p class="title text-2xl mt-3">{{titleText}} </p>
+    </div>
+
+    <div v-if="isMain == 'false'" class="header flex justify-between item-center pt-2 px-8 mt-3">
+            <p class="title text-2xl">{{titleText}} </p>
+            <a @click="$router.push('/')" class="title text-md cursor-pointer flex items-center text-sky-500 hover:text-sky-900">Return Home Page </a>
+    </div>
+
+    <div class="buttons h-64 mt-2 flex  items-center justify-center text-center">
+        <slot></slot>
+    </div>
+</div>
+</template>
+
+<script>
+export default {
+    props: {
+        titleText: {
+            type: String,
+            default: () => "Operations"
+        },
+        isMain: {
+            type: Boolean,
+            default: () => false
+        },
+    }
+}
+</script>
+
+<style scoped> 
+</style>
