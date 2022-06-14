@@ -1,7 +1,7 @@
 <template>
     <div v-on="$listeners" class="action-div flex justify-center rounded cursor-pointer">
     <!-- <operation-button class="w-80 text-md bg-purple-900 text-offGray"  buttonText="Add New Book2"/> -->
-        <button class="action-btn cursor-pointer py-2 rounded flex justify-center px-8 text-md  text-white text-center">
+        <button class="action-btn cursor-pointer rounded flex justify-center px-8 text-md   text-center">
             {{buttonText}} 
         </button>
     </div>

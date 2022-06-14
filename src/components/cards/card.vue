@@ -10,7 +10,11 @@
         <a @click="$router.push('/')" class="return-btn text-md cursor-pointer flex items-center text-sky-500 hover:text-sky-900">Return Home Page </a>
     </div>
 
-    <div class="buttons h-64 mt-2 flex  items-center justify-center text-center">
+    <div  v-if="isBookList == 'false'" class="h-64 mt-10 flex  items-center justify-center text-center">
+        <slot></slot>
+    </div>
+
+    <div  v-if="isBookList == 'true'" class="h-64 mt-2 flex  items-start justify-start text-center">
         <slot></slot>
     </div>
 </div>
@@ -24,6 +28,10 @@ export default {
             default: () => "Operations"
         },
         isMain: {
+            type: Boolean,
+            default: () => false
+        },
+        isBookList: {
             type: Boolean,
             default: () => false
         },
