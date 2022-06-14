@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       minWidth: {
         '52': '208px',
+        '60': '240px',
+        '72': '288px',
       },
     },
     colors: {
@@ -14,9 +16,9 @@ module.exports = {
       'purple-500': '#99A7ED',
       'purple-700': '#717bf3',
       'purple-900': '#505DF1',
-      'sky-200': '#38BDF8',
+      'sky-200': '#69cdfa',
       'sky-500': '#38bdf8',
-      'sky-900': '#0ea5e9',
+      'sky-900': '#09acf4',
       offWhite: '#F8F8FC',
       offGray: '#A4A4AB',
       'gray-200': '#b8b8c1',

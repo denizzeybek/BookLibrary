@@ -6,8 +6,8 @@
     </div>
 
     <div v-if="isMain == 'false'" class="header flex justify-between item-center pt-2 px-8 mt-3">
-            <p class="title text-2xl">{{titleText}} </p>
-            <a @click="$router.push('/')" class="title text-md cursor-pointer flex items-center text-sky-500 hover:text-sky-900">Return Home Page </a>
+        <p class="title text-2xl">{{titleText}} </p>
+        <a @click="$router.push('/')" class="return-btn text-md cursor-pointer flex items-center text-sky-500 hover:text-sky-900">Return Home Page </a>
     </div>
 
     <div class="buttons h-64 mt-2 flex  items-center justify-center text-center">
@@ -31,5 +31,16 @@ export default {
 }
 </script>
 
-<style scoped> 
+<style scoped>
+@media only screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+    }
+    .title{
+        font-size:16px;
+    }
+    .return-btn{
+        font-size:14px;
+    }
+}
 </style>
