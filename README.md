@@ -1,5 +1,8 @@
-# booklibrary
-
+# To Run Data Service
+http://localhost:3000/users
+```
+npm run json:server
+```
 ## Project setup
 ```
 npm install
