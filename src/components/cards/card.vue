@@ -1,6 +1,5 @@
 <template>
-<div class="card-container bg-offWhite rounded border border-purple-900 shadow-lg shadow-purple-500 h-96 min-w-52">
-
+<div class="card-container bg-offWhite rounded border border-purple-900 shadow-lg shadow-purple-500 min-w-52">
     <div v-if="isMain == 'true'" class="header flex justify-center text-center pt-2 flex-col">
         <p class="title text-2xl mt-3">{{titleText}} </p>
     </div>
@@ -28,12 +27,12 @@ export default {
             default: () => "Operations"
         },
         isMain: {
-            type: Boolean,
-            default: () => false
+            type: String,
+            default: () => "false"
         },
         isBookList: {
-            type: Boolean,
-            default: () => false
+            type: String,
+            default: () => "false"
         },
     }
 }

@@ -1,34 +1,100 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"deniz",
-            "companyId": 1
-        },
-        {
-            "id":2,
-            "name":"ege",
-            "companyId": 1
-        },
-        {
-            "id":3,
-            "name":"osman",
-            "companyId": 1
-        },
-        {
-            "id":2,
-            "name":"pekcan",
-            "companyId": 1
-        }
-    ],
-    "companies":[
-        {
-            "id":1,
-            "name":"eclone"
-        },
-        {
-            "id":2,
-            "name":"zeka"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "identityNumber": "12312312345",
+      "fullName": "john doe",
+      "address": "217 Bradtke Skyway Lake Marilyn/New Jersey"
+    },
+    {
+      "id": 2,
+      "identityNumber": "98723476510",
+      "fullName": "Arden Turner",
+      "address": "53 Latonya Prairie South Kris/Illinois"
+    },
+    {
+      "id": 3,
+      "identityNumber": "39478082957",
+      "fullName": "Vern Orn",
+      "address": "4662 Analisa Village Klingburgh/Virginia"
+    },
+    {
+      "id": "4",
+      "identityNumber": "47396195720",
+      "fullName": "Noah Ross",
+      "address": "234 Rose St Seatle/Washington"
+    },
+    {
+      "bookName": "Killing The Killers",
+      "identityNumber": "12312312",
+      "fullName": "fullname",
+      "address": "address",
+      "id": "81cc5bf0-ac1b-4b94-ba1d-0196812d50f4"
+    },
+    {
+      "bookName": "Killing The Killers",
+      "identityNumber": "849058690458",
+      "fullName": "sdlşfksşld",
+      "address": "sdşkfsşldkf",
+      "id": "d71eae16-dc76-485c-bf79-f845a05592f6"
+    },
+    {
+      "bookName": "Happy Go Lucky",
+      "identityNumber": "123123123123",
+      "fullName": "mutlu oldum",
+      "address": "mutlunun evi",
+      "id": "13019bca-550b-4d41-8cdf-16e4979a9e13"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "bookName": "Happy Go Lucky",
+      "author": "David Sedaris",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
+      "userIdentityNumber": ""
+    },
+    {
+      "id": 2,
+      "bookName": "Killing The Killers",
+      "author": "Bill O'Reilly and Martin Dugard",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9781250279255.jpg",
+      "userIdentityNumber": ""
+    },
+    {
+      "id": 4,
+      "bookName": "Finding Me2",
+      "author": "Viola Davis2",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
+      "userIdentityNumber": ""
+    },
+    {
+      "id": 3,
+      "bookName": "Finding Me",
+      "author": "Viola Davis",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
+      "userIdentityNumber": "1"
+    },
+    {
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
+      "bookName": "Yeni kitap",
+      "author": "ben",
+      "id": "6f53688c-2601-4603-b884-a721f4d17886",
+      "userIdentityNumber": ""
+    },
+    {
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
+      "bookName": "Yeni2",
+      "author": "yazar2",
+      "id": "2e8db01d-8db8-4699-91ab-bced779cc0cf",
+      "userIdentityNumber": ""
+    },
+    {
+      "bookName": "yeni3",
+      "author": "yazar3",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
+      "id": "d9ed4a3d-9652-4b07-a817-9fa109492367",
+      "userIdentityNumber": ""
+    }
+  ]
 }
