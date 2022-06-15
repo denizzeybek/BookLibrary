@@ -23,27 +23,13 @@
           name="addBook"
           v-model="formValues"
         >
-          <FormulateInput
+          <FormulateInput v-for="input in inputsArray" :key="input.id"
             class="form-custom-inputs"
-            name="bookName"
             type="text"
-            placeholder="Please Enter Book Name*"
             validation="required"
-          />
-          <FormulateInput
-            class="form-custom-inputs"
-            name="author"
-            type="text"
-            placeholder="Please Enter Author Name*"
-            validation="required"
-          />
-          <FormulateInput
-            class="form-custom-inputs"
-            name="imageUrl"
-            type="text"
-            placeholder="Please Enter Book Image URL*"
-            validation="required"
-          />
+            :name="input.name"
+            :placeholder="input.placeholder"
+          /> 
           <action-button
             class="bg-sky-500 hover:bg-sky-900 text-white py-2 my-6"
             buttonText="Save"
@@ -67,6 +53,11 @@ export default {
   data() {
     return {
       formValues: {},
+      inputsArray: [
+        {name:"bookName", placeholder:"Please Enter Book Name*"},
+        {name:"author", placeholder:"Please Enter Author Name*"},
+        {name:"imageUrl", placeholder:"Please Enter Book Image URL*"},
+      ]
     };
   },
   methods: {

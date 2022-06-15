@@ -50,7 +50,6 @@
 
 <script>
 import card from "@/components/cards/card.vue";
-import combobox from "@/components/inputs/combobox.vue";
 import actionButton from "@/components/buttons/actionButton.vue";
 
 import { mapGetters } from "vuex";
@@ -60,7 +59,6 @@ export default {
   components: {
     actionButton,
     card,
-    combobox,
   },
   async created() {
     await this.$store.dispatch("getUserListAction")

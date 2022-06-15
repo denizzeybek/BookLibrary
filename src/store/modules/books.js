@@ -66,6 +66,9 @@ const mutations = {
     if(user){
       state.address = user.address;
     }
+    else{
+      state.address = ""
+    }
   }
 };
 

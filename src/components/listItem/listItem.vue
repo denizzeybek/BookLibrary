@@ -38,12 +38,11 @@
       </div>
       <div class="list-labels">
         <div v-if="itemObject.userIdentityNumber">
-          <status-button @click="removeFromUser(itemObject)" class="bg-red-500 text-white hover:bg-red-900 mt-2" buttonText="At User"/>
-          <!-- <status-button
-            @click="onStatusButtonClick(itemObject)"
+          <status-button
+            @click="$emit('removeFromUser', itemObject)"
             class="bg-red-500 text-white hover:bg-red-900 mt-2"
             buttonText="At User"
-          /> -->
+          />
         </div>
         <div v-else>
           <status-button
@@ -53,7 +52,7 @@
         </div>
         <div v-if="!itemObject.userIdentityNumber">
           <delete-button
-            @click="deleteItem(itemObject)"
+            @click="$emit('deleteItem', itemObject)"
             class="text-red-500 hover:text-red-900 adjustment mt-3"
             buttonText="Delete"
           />
@@ -74,54 +73,6 @@ export default {
   props: {
     itemObject: {
       type: Object,
-    },
-  },
-  methods: {
-    deleteItem(itemObject) {
-      console.log(this, "this");
-      this.$confirm({
-        message: `Are you sure you want to delete ${itemObject.bookName} ?`,
-        button: {
-          no: "No",
-          yes: "Yes",
-        },
-        callback: (confirm) => {
-          if (!confirm) {
-            this.$toastr(
-              "error",
-              `${itemObject.bookName} could not be deleted!`,
-              "Error"
-            );
-          }
-          this.$store.dispatch("removeBookAction", {
-            vm: this,
-            id: itemObject.id,
-            name: itemObject.bookName,
-          });
-        },
-      });
-    },
-    removeFromUser(itemObject) {
-      this.$confirm({
-        message: `Are you sure you want to take ${itemObject.bookName} to library?`,
-        button: {
-          no: "No",
-          yes: "Yes",
-        },
-        callback: (confirm) => {
-          if (!confirm) {
-            this.$toastr(
-              "error",
-              `${itemObject.bookName} could not take to library!`,
-              "Error"
-            );
-          }
-          this.$store.dispatch("takeBookBackAction", {
-            vm: this,
-            id: itemObject.id,
-          });
-        },
-      });
     },
   },
 };

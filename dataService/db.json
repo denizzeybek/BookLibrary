@@ -20,6 +20,20 @@
       "fullName": "mutlu oldum",
       "address": "mutlunun evi",
       "id": "13019bca-550b-4d41-8cdf-16e4979a9e13"
+    },
+    {
+      "bookName": "yeni4",
+      "identityNumber": "2903809283028",
+      "fullName": "kullanıcı4",
+      "address": "kullanıcı 4 ün ev adresi muğla/türkiye",
+      "id": "2f386136-e038-4a7a-950f-e5e3aed05206"
+    },
+    {
+      "bookName": "Killing The Killers",
+      "identityNumber": "234827398472983",
+      "fullName": "user5",
+      "address": "user5in adresi",
+      "id": "c6ca403b-5f69-4f10-95a1-7fb0d135c797"
     }
   ],
   "books": [
@@ -63,13 +77,6 @@
       "bookName": "Yeni2",
       "author": "yazar2",
       "id": "2e8db01d-8db8-4699-91ab-bced779cc0cf",
-      "userIdentityNumber": ""
-    },
-    {
-      "bookName": "yeni3",
-      "author": "yazar3",
-      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
-      "id": "d9ed4a3d-9652-4b07-a817-9fa109492367",
       "userIdentityNumber": ""
     }
   ]

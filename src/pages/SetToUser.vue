@@ -24,33 +24,14 @@
           v-model="formValues"
         >
           <FormulateInput
+            v-for="input in inputsArray"
+            :key="input.id"
             class="form-custom-inputs"
-            name="bookName"
-            type="select"
+            validation="required"
             :options="getBookSelectObj"
-            placeholder="Please Select a Book*"
-            validation="required"
-          />
-          <FormulateInput
-            class="form-custom-inputs"
-            name="identityNumber"
-            type="text"
-            placeholder="Please Insert User Identity Number*"
-            validation="required"
-          />
-          <FormulateInput
-            class="form-custom-inputs"
-            name="fullName"
-            type="text"
-            placeholder="Please Enter User Fullname*"
-            validation="required"
-          />
-          <FormulateInput
-            class="form-custom-inputs"
-            name="address"
-            type="textarea"
-            placeholder="Please Enter User Address*"
-            validation="required"
+            :name="input.name"
+            :type="input.type"
+            :placeholder="input.placeholder"
           />
           <action-button
             class="bg-sky-500 hover:bg-sky-900 text-white py-2 my-6"
@@ -81,6 +62,28 @@ export default {
   data() {
     return {
       formValues: {},
+      inputsArray: [
+        {
+          name: "bookName",
+          type: "select",
+          placeholder: "Please Enter Book Name*",
+        },
+        {
+          name: "identityNumber",
+          type: "text",
+          placeholder: "Please Insert User Identity Number*",
+        },
+        {
+          name: "fullName",
+          type: "text",
+          placeholder: "Please Enter User Fullname*",
+        },
+        {
+          name: "address",
+          type: "textarea",
+          placeholder: "Please Enter User Address*",
+        },
+      ],
     };
   },
   methods: {
