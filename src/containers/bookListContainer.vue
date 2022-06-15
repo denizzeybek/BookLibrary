@@ -2,6 +2,7 @@
 <div class="home bg-purple-100 h-screen w-screen flex items-center justify-around flex-wrap">
     <card isBookList="true" class="w-1/2 h-5/6" isMain="false" titleText="Book List" style="position:relative;">
         <div class="flex items-start flex-col">
+            <!-- <list-item @onStatusButtonClick="handleStatus" v-for="book in pageOfItems" :key="book.id" :itemObject="book"/>  -->
             <list-item v-for="book in pageOfItems" :key="book.id" :itemObject="book"/> 
         </div>
         <div  class="flex items-center justify-center w-full"  style="position:absolute;bottom:0;"> 
@@ -38,7 +39,10 @@ export default {
             console.log("sayfa değişti", pageOfItems)
             // update page of items
             this.pageOfItems = pageOfItems;
-        }
+        },
+        // handleStatus(itemObject){
+        //     console.log("here", itemObject)
+        // }
     },
     computed:{
         ...mapGetters([

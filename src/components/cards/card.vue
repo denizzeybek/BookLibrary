@@ -1,5 +1,6 @@
 <template>
 <div class="card-container bg-offWhite rounded border border-purple-900 shadow-lg shadow-purple-500 min-w-52">
+<!-- <div class="card-container max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"> -->
     <div v-if="isMain == 'true'" class="header flex justify-center text-center pt-2 flex-col">
         <p class="title text-2xl mt-3">{{titleText}} </p>
     </div>
