@@ -20,7 +20,7 @@
               :name="input.name"
               :placeholder="input.placeholder"
               style="margin-left: 40px"
-            /> 
+            />
             <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
               <general-button buttonText="Save"></general-button>
             </div>
@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import mainCard from "@/components/cards/mainCard";
-import generalButton from "@/components/buttons/generalButton.vue";
+import mainCard from "@/components/card/mainCard";
+import generalButton from "@/components/button/generalButton.vue";
 import headerSection from "@/components/header/header.vue";
 import uuid4 from "@/assets/js/uuid4";
 

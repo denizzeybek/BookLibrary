@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import mainCard from "@/components/cards/mainCard";
+import mainCard from "@/components/card/mainCard";
 import headerSection from "@/components/header/header.vue";
 import customPagination from "@/components/pagination/pagination.vue";
 import listItem from "@/components/listItem/listItem.vue";

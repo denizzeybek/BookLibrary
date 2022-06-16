@@ -53,8 +53,8 @@
 </template>
 
 <script>
-import mainCard from "@/components/cards/mainCard";
-import generalButton from "@/components/buttons/generalButton.vue";
+import mainCard from "@/components/card/mainCard";
+import generalButton from "@/components/button/generalButton.vue";
 export default {
   components: {
     mainCard,

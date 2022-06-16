@@ -3,7 +3,7 @@
     <div class="flex items-center pl-2">
       <div class="flex-shrink-0">
         <img
-          class="w-12 h-12  px-1"
+          class="w-12 h-12 px-1"
           :src="itemObject.imageUrl"
           :alt="itemObject.bookName"
         />
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import generalButton from "@/components/buttons/generalButton.vue";
+import generalButton from "@/components/button/generalButton.vue";
 export default {
   components: {
     generalButton,

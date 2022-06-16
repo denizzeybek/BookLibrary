@@ -30,10 +30,15 @@
                 flex-col
               "
             >
-              <p v-if="getAddress" class="text-lg max-w-fit text-left text-white">
+              <p
+                v-if="getAddress"
+                class="text-lg max-w-fit text-left text-white"
+              >
                 {{ getAddress }}
               </p>
-              <p v-else class="text-lg text-white">This book is in library...</p>
+              <p v-else class="text-lg text-white">
+                This book is in library...
+              </p>
             </div>
             <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
               <general-button buttonText="Get From User"></general-button>
@@ -46,9 +51,9 @@
 </template>
 
 <script>
-import mainCard from "@/components/cards/mainCard";
+import mainCard from "@/components/card/mainCard";
 import headerSection from "@/components/header/header.vue";
-import generalButton from "@/components/buttons/generalButton.vue";
+import generalButton from "@/components/button/generalButton.vue";
 import { mapGetters } from "vuex";
 export default {
   components: {
@@ -71,7 +76,10 @@ export default {
       // console.log("here");
 
       let formObject = this.formValues;
-      await this.$store.dispatch("findUserAddressAction", {vm:this, bookName: formObject.bookName});
+      await this.$store.dispatch("findUserAddressAction", {
+        vm: this,
+        bookName: formObject.bookName,
+      });
     },
   },
   computed: {
