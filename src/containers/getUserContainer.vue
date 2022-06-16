@@ -9,6 +9,7 @@
             @submit="handleSubmit"
             name="addBook"
             v-model="formValues"
+            class="w-1/2 flex justify-center flex-col my-5"
           >
             <FormulateInput
               class="form-custom-inputs text-white"
