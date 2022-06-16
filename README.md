@@ -1,4 +1,3 @@
-# booklibrary
 
 ## Project setup
 ```
@@ -7,6 +6,8 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
+npm run json:server
+
 npm run serve
 ```
 

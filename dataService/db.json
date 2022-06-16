@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "bookName": "Killing The Killers",
+      "identityNumber": "12312312",
+      "fullName": "fullname",
+      "address": "Hacı feyzullah mah Ş er Cad Hacı feyzullah mah Ş er Cad Hacı feyzullah mah Ş er Cad",
+      "id": "81cc5bf0-ac1b-4b94-ba1d-0196812d50f4"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "bookName": "Happy Go Lucky",
+      "author": "David Sedaris",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
+      "userIdentityNumber": "98989898"
+    },
+    {
+      "id": 4,
+      "bookName": "Finding Me2",
+      "author": "Viola Davis2",
+      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
+      "userIdentityNumber": ""
+    }, 
+    {
+      "id": 5,
+      "bookName": "Killing The Killers",
+      "author": "Big David",
+      "imageUrl": "https://m.media-amazon.com/images/I/51pl-L83XXL.jpg",
+      "userIdentityNumber": "123789237"
+    }, 
+    {
+      "id": 6,
+      "bookName": "Atomic Habits",
+      "author": "James Clear",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOohPIvqyOwEV6olD8Oq5iIwpERbaMh3IY7_O8oc6w&usqp=CAE&s",
+      "userIdentityNumber": ""
+    }, 
+    {
+      "id": 7,
+      "bookName": "Sparring Partners",
+      "author": "John Grisham",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJkTWki-kevqOZGAhq-noCmxydh2Wco4H-ToewxvW&usqp=CAE&s",
+      "userIdentityNumber": "123123"
+    },
+
+    {
+      "id": 8,
+      "bookName": "The Midnight Library",
+      "author": "Matt Haigh",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiakYonrI1qV3feFH6kNp0617viKIkg6Ttgle3ISsr&usqp=CAE&s",
+      "userIdentityNumber": ""
+    }
+  ]
+}
