@@ -3,7 +3,7 @@
     <div class="flex items-center pl-2">
       <div class="flex-shrink-0">
         <img
-          class="w-8 h-8 rounded-full px-1"
+          class="w-12 h-12  px-1"
           :src="itemObject.imageUrl"
           :alt="itemObject.bookName"
         />

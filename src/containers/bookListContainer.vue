@@ -82,7 +82,7 @@ export default {
       });
     },
     deleteBookItem(itemObject) {
-      console.log(this, "this");
+      // console.log(this, "this");
       this.$confirm({
         message: `Are you sure you want to delete ${itemObject.bookName} ?`,
         button: {

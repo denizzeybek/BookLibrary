@@ -5,7 +5,7 @@ const state = {
   userList: [],
   bookSelectObj: {},
   bookId: null,
-  address: ""
+  address: "",
 };
 
 const getters = {
@@ -18,9 +18,9 @@ const getters = {
   getBookId(state) {
     return state.bookId;
   },
-  getAddress(state){
-    return state.address
-  }
+  getAddress(state) {
+    return state.address;
+  },
 };
 
 const mutations = {
@@ -56,23 +56,21 @@ const mutations = {
       }
     });
   },
-  setUserAddress(state, {vm, bookName}){
-    console.log("bookName ", bookName)
+  setUserAddress(state, { vm, bookName }) {
+    // console.log("bookName ", bookName)
     let list = state.userList;
-    console.log("list ", list)
+    // console.log("list ", list)
 
     let user = list.find((user) => user.bookName == bookName);
-    console.log("user ", user)
-    if(user){
+    // console.log("user ", user)
+    if (user) {
       state.address = user.address;
       vm.$toastr("success", `${bookName} has been getted from user`, "GETTED!");
-    }
-    else{
-      state.address = ""
+    } else {
+      state.address = "";
       vm.$toastr("error", `${bookName} is in library`, "ERROR!");
-
     }
-  }
+  },
 };
 
 const actions = {
@@ -88,13 +86,12 @@ const actions = {
     }
   },
   async removeBookAction({ commit }, { vm, id, name }) {
-    console.log("id ", id);
+    // console.log("id ", id);
     const { data, error } = await request(`/books/` + id, "delete");
     if (data) {
       // console.log(data, error, id)
       vm.$toastr("success", `${name} deleted`, "DELETED!");
-    }
-    if (error) {
+    } else {
       console.log(data, error);
       vm.$toastr("error", `${name} could not be removed`, "ERROR!");
     }
@@ -103,7 +100,7 @@ const actions = {
   async addBookAction({ commit }, { vm, formObject }) {
     const { data, error } = await request(`/books`, "post", formObject);
     if (data) {
-      console.log(data, error);
+      // console.log(data, error);
       vm.$toastr("success", `${formObject.bookName} Added`, "ADDED!");
       vm.$formulate.reset("addBook");
     } else {
@@ -118,16 +115,15 @@ const actions = {
   async setToUserAction({ commit }, { vm, formObject }) {
     const { data, error } = await request(`/users`, "post", formObject);
     if (data) {
-      console.log(data, error);
+      // console.log(data, error);
       vm.$toastr(
         "success",
         `${formObject.bookName} setted to ${formObject.fullName}`,
         "SETTED!"
       );
       vm.$formulate.reset("setToUser");
-    }
-    if (error) {
-      console.log(data, error);
+    } else {
+      // console.log(data, error);
       vm.$toastr("error", "Book could not be setted", "ERROR!");
     }
   },
@@ -136,15 +132,12 @@ const actions = {
   },
   async updateBookIdentityAction({ commit }, { bookId, userIdentityNumber }) {
     // id ye göre patch edip, identityNumber'ı değiştir
-    console.log("{bookId, userIdentityNumber} ", {
-      bookId,
-      userIdentityNumber,
-    });
+
     const { data, error } = await request(`/books/${bookId}`, "patch", {
       userIdentityNumber,
     });
     if (data) {
-      console.log(data, error);
+      // console.log(data, error);
       // vm.$toastr('success', `${name} deleted`, 'DELETED!')
     } else {
       console.log(data, error);
@@ -156,29 +149,28 @@ const actions = {
       userIdentityNumber: "",
     });
     if (data) {
-      console.log(data, error);
+      // console.log(data, error);
       // vm.$toastr("success", `Status updated`, "UPDATED!");
       commit("updateUserList", id);
-    }
-    if (error) {
+    } else {
       console.log(data, error);
       vm.$toastr("error", `Status could not be updated`, "ERROR!");
     }
   },
-  async getUserListAction({commit}){ 
+  async getUserListAction({ commit }) {
     const { data, error } = await request(`/users`, "get");
     if (data) {
-      console.log(data, error);
+      // console.log(data, error);
       let input = {
         response: data,
         type: "userList",
       };
       commit("setMutateHandler", input);
-    }   
+    }
   },
-  findUserAddressAction({commit}, {vm, bookName}){
-    commit("setUserAddress", {vm, bookName});
-  }
+  findUserAddressAction({ commit }, { vm, bookName }) {
+    commit("setUserAddress", { vm, bookName });
+  },
 };
 
 export default {

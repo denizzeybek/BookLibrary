@@ -16,9 +16,4 @@ const request = async (url, method, params) => {
     }
 }
 
-// response = { data: [ ], name: 'asd' }
-// es6 => destru
-// const asd = response.data
-// const { data, name } = response
-
 export default request

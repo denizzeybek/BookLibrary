@@ -63,7 +63,7 @@ export default {
   methods: {
     changePage() {
       // this.$router.push('/add-new-book')
-      console.log("here");
+      // console.log("here");
       this.$router.push("/add-new-book");
     },
   },

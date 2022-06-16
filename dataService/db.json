@@ -6,48 +6,6 @@
       "fullName": "fullname",
       "address": "Hacı feyzullah mah Ş er Cad Hacı feyzullah mah Ş er Cad Hacı feyzullah mah Ş er Cad",
       "id": "81cc5bf0-ac1b-4b94-ba1d-0196812d50f4"
-    },
-    {
-      "bookName": "Killing The Killers",
-      "identityNumber": "849058690458",
-      "fullName": "sdlşfksşld",
-      "address": "sdşkfsşldkf",
-      "id": "d71eae16-dc76-485c-bf79-f845a05592f6"
-    },
-    {
-      "bookName": "Happy Go Lucky",
-      "identityNumber": "123123123123",
-      "fullName": "mutlu oldum",
-      "address": "mutlunun evi",
-      "id": "13019bca-550b-4d41-8cdf-16e4979a9e13"
-    },
-    {
-      "bookName": "yeni4",
-      "identityNumber": "2903809283028",
-      "fullName": "kullanıcı4",
-      "address": "kullanıcı 4 ün ev adresi muğla/türkiye",
-      "id": "2f386136-e038-4a7a-950f-e5e3aed05206"
-    },
-    {
-      "bookName": "Killing The Killers",
-      "identityNumber": "234827398472983",
-      "fullName": "user5",
-      "address": "user5in adresi",
-      "id": "c6ca403b-5f69-4f10-95a1-7fb0d135c797"
-    },
-    {
-      "bookName": "Finding Me",
-      "identityNumber": "123789237",
-      "fullName": "sdjflkjl",
-      "address": "wjıejslamödfsmödnf",
-      "id": "7889f0e8-bf5f-4d59-b4c6-6be5ec87b3b9"
-    },
-    {
-      "bookName": "Happy Go Lucky",
-      "identityNumber": "3495739847598",
-      "fullName": "sonn",
-      "address": "sonn address",
-      "id": "47336b82-beb3-4d93-b220-d5d0c69e74a0"
     }
   ],
   "books": [
@@ -56,7 +14,7 @@
       "bookName": "Happy Go Lucky",
       "author": "David Sedaris",
       "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
-      "userIdentityNumber": "3495739847598"
+      "userIdentityNumber": "98989898"
     },
     {
       "id": 4,
@@ -64,19 +22,34 @@
       "author": "Viola Davis2",
       "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
       "userIdentityNumber": ""
-    },
+    }, 
     {
-      "id": 3,
-      "bookName": "Finding Me",
-      "author": "Viola Davis",
-      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
+      "id": 5,
+      "bookName": "Killing The Killers",
+      "author": "Big David",
+      "imageUrl": "https://m.media-amazon.com/images/I/51pl-L83XXL.jpg",
       "userIdentityNumber": "123789237"
-    },
+    }, 
     {
-      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
-      "bookName": "Yeni2",
-      "author": "yazar2",
-      "id": "2e8db01d-8db8-4699-91ab-bced779cc0cf",
+      "id": 6,
+      "bookName": "Atomic Habits",
+      "author": "James Clear",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOohPIvqyOwEV6olD8Oq5iIwpERbaMh3IY7_O8oc6w&usqp=CAE&s",
+      "userIdentityNumber": ""
+    }, 
+    {
+      "id": 7,
+      "bookName": "Sparring Partners",
+      "author": "John Grisham",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJkTWki-kevqOZGAhq-noCmxydh2Wco4H-ToewxvW&usqp=CAE&s",
+      "userIdentityNumber": "123123"
+    },
+
+    {
+      "id": 8,
+      "bookName": "The Midnight Library",
+      "author": "Matt Haigh",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiakYonrI1qV3feFH6kNp0617viKIkg6Ttgle3ISsr&usqp=CAE&s",
       "userIdentityNumber": ""
     }
   ]
