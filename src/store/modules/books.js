@@ -56,7 +56,7 @@ const mutations = {
       }
     });
   },
-  setUserAddress(state, bookName){
+  setUserAddress(state, {vm, bookName}){
     console.log("bookName ", bookName)
     let list = state.userList;
     console.log("list ", list)
@@ -65,9 +65,12 @@ const mutations = {
     console.log("user ", user)
     if(user){
       state.address = user.address;
+      vm.$toastr("success", `${bookName} has been getted from user`, "GETTED!");
     }
     else{
       state.address = ""
+      vm.$toastr("error", `${bookName} is in library`, "ERROR!");
+
     }
   }
 };
@@ -173,8 +176,8 @@ const actions = {
       commit("setMutateHandler", input);
     }   
   },
-  findUserAddressAction({commit}, bookName){
-    commit("setUserAddress", bookName);
+  findUserAddressAction({commit}, {vm, bookName}){
+    commit("setUserAddress", {vm, bookName});
   }
 };
 

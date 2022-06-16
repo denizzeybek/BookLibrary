@@ -71,7 +71,7 @@ export default {
       console.log("here");
 
       let formObject = this.formValues;
-      await this.$store.dispatch("findUserAddressAction", formObject.bookName);
+      await this.$store.dispatch("findUserAddressAction", {vm:this, bookName: formObject.bookName});
     },
   },
   computed: {
