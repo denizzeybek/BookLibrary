@@ -9,7 +9,7 @@
             @submit="handleSubmit"
             name="addBook"
             v-model="formValues"
-            class="w-11/12 flex justify-center flex-col my-5"
+            class="w-1/2 flex justify-center flex-col my-5"
           >
             <FormulateInput
               v-for="input in inputsArray"
@@ -18,8 +18,7 @@
               type="text"
               validation="required"
               :name="input.name"
-              :placeholder="input.placeholder"
-              style="margin-left: 40px"
+              :placeholder="input.placeholder" 
             />
             <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
               <general-button buttonText="Save"></general-button>
