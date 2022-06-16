@@ -34,6 +34,20 @@
       "fullName": "user5",
       "address": "user5in adresi",
       "id": "c6ca403b-5f69-4f10-95a1-7fb0d135c797"
+    },
+    {
+      "bookName": "Finding Me",
+      "identityNumber": "123789237",
+      "fullName": "sdjflkjl",
+      "address": "wjıejslamödfsmödnf",
+      "id": "7889f0e8-bf5f-4d59-b4c6-6be5ec87b3b9"
+    },
+    {
+      "bookName": "Happy Go Lucky",
+      "identityNumber": "3495739847598",
+      "fullName": "sonn",
+      "address": "sonn address",
+      "id": "47336b82-beb3-4d93-b220-d5d0c69e74a0"
     }
   ],
   "books": [
@@ -42,14 +56,7 @@
       "bookName": "Happy Go Lucky",
       "author": "David Sedaris",
       "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",
-      "userIdentityNumber": ""
-    },
-    {
-      "id": 2,
-      "bookName": "Killing The Killers",
-      "author": "Bill O'Reilly and Martin Dugard",
-      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9781250279255.jpg",
-      "userIdentityNumber": ""
+      "userIdentityNumber": "3495739847598"
     },
     {
       "id": 4,
@@ -63,14 +70,7 @@
       "bookName": "Finding Me",
       "author": "Viola Davis",
       "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
-      "userIdentityNumber": ""
-    },
-    {
-      "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780063037328.jpg",
-      "bookName": "Yeni kitap",
-      "author": "ben",
-      "id": "6f53688c-2601-4603-b884-a721f4d17886",
-      "userIdentityNumber": ""
+      "userIdentityNumber": "123789237"
     },
     {
       "imageUrl": "https://storage.googleapis.com/du-prd/books/images/9780316392457.jpg",

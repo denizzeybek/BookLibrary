@@ -1,24 +1,11 @@
 <template>
-  <div
-    class="
-      home
-      bg-purple-100
-      h-screen
-      w-screen
-      flex
-      items-center
-      justify-around
-      flex-wrap
-    "
-  >
-    <card
-      isBookList="false"
-      isMain="false"
-      class="w-1/2 h-96"
-      titleText="Set To User"
-    >
-      <div class="min-w-72">
-        <FormulateForm
+  <div class="h-screen bg-gray-600 flex justify-center items-center">
+    <div class="w-screen">
+      <main-card class="py-5">
+        <headerSection headerText="Set To User" />
+
+        <div class="form-section w-11/12 flex justify-center">
+          <FormulateForm
           @submit="handleSubmit"
           name="setToUser"
           v-model="formValues"
@@ -26,34 +13,34 @@
           <FormulateInput
             v-for="input in inputsArray"
             :key="input.id"
-            class="form-custom-inputs"
+            class="form-custom-inputs text-white"
             validation="required"
             :options="getBookSelectObj"
             :name="input.name"
             :type="input.type"
             :placeholder="input.placeholder"
           />
-          <action-button
-            class="bg-sky-500 hover:bg-sky-900 text-white py-2 my-6"
-            buttonText="Set To User"
-          />
-        </FormulateForm>
-      </div>
-    </card>
+            <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
+              <general-button buttonText="Set To User"></general-button>
+            </div>
+          </FormulateForm>
+        </div>
+      </main-card>
+    </div>
   </div>
 </template>
 
 <script>
-import card from "@/components/cards/card.vue";
-import actionButton from "@/components/buttons/actionButton.vue";
+import mainCard from "@/components/cards/mainCard";
+import headerSection from "@/components/header/header.vue";
+import generalButton from "@/components/buttons/generalButton.vue";
 import { mapGetters } from "vuex";
 import uuid4 from "@/assets/js/uuid4";
-
 export default {
-  name: "AddNewBook",
   components: {
-    actionButton,
-    card,
+    mainCard,
+    generalButton,
+    headerSection,
   },
   async created() {
     await this.$store.dispatch("getBookListAction");
@@ -107,11 +94,5 @@ export default {
 };
 </script>
 
-<style scoped>
-@media only screen and (max-width: 900px) {
-  .form-custom-inputs {
-    width: 150px;
-    font-size: 11px;
-  }
-}
+<style>
 </style>

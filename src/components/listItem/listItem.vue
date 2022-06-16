@@ -1,74 +1,57 @@
 <template>
-  <div
-    class="
-      list-row
-      flex
-      w-full
-      border-solid border
-      py-1
-      my-2
-      border-sky-500
-      px-3
-      rounded
-    "
-    style="width: 100%; margin-left: 4px"
-  >
-    <div class="list-img flex items-center justify-center">
-      <img
-        v-if="itemObject.imageUrl"
-        class="book-img"
-        :src="itemObject.imageUrl"
-        alt="book image"
-      />
-      <img
-        v-else
-        class="book-img"
-        src="../../assets/images/book1.png"
-        alt="book image"
-      />
-    </div>
-    <div class="list-content flex justify-between pl-2" style="width: 600px">
-      <div class="list-texts">
-        <div>
-          <p class="text-lg text-start pt-1">{{ itemObject.bookName }}</p>
-        </div>
-        <div>
-          <p class="text-md text-start mt-2">{{ itemObject.author }}</p>
-        </div>
+  <li class="py-3 sm:py-4">
+    <div class="flex items-center pl-2">
+      <div class="flex-shrink-0">
+        <img
+          class="w-8 h-8 rounded-full px-1"
+          :src="itemObject.imageUrl"
+          :alt="itemObject.bookName"
+        />
       </div>
-      <div class="list-labels">
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-medium truncate px-1 text-white">
+          {{ itemObject.bookName }}
+        </p>
+        <p class="text-sm truncate text-gray-400 px-1">
+          {{ itemObject.author }}
+        </p>
+      </div>
+      <div class="inline-flex items-center text-base font-semibold text-white">
         <div v-if="itemObject.userIdentityNumber">
-          <status-button
+          <general-button
             @click="$emit('removeFromUser', itemObject)"
-            class="bg-red-500 text-white hover:bg-red-900 mt-2"
+            class="px-1"
             buttonText="At User"
-          />
+            color="blue"
+          ></general-button>
         </div>
         <div v-else>
-          <status-button
-            class="bg-green-500 text-white hover:bg-green-900 mt-2"
+          <general-button
             buttonText="In Store"
-          />
+            color="green"
+            class="px-1"
+          ></general-button>
         </div>
+      </div>
+      <div class="inline-flex items-center text-base font-semibold text-white">
         <div v-if="!itemObject.userIdentityNumber">
-          <delete-button
+          <general-button
             @click="$emit('deleteItem', itemObject)"
-            class="text-red-500 hover:text-red-900 adjustment mt-3"
+            class="px-1"
             buttonText="Delete"
-          />
+            color="red"
+          ></general-button>
         </div>
       </div>
     </div>
-  </div>
+  </li>
 </template>
 
 <script>
-import deleteButton from "@/components/buttons/actionButton.vue";
-import statusButton from "@/components/buttons/actionButton.vue";
+import generalButton from "@/components/buttons/generalButton.vue";
 export default {
   components: {
-    deleteButton,
-    statusButton,
+    generalButton,
   },
   props: {
     itemObject: {
@@ -79,11 +62,4 @@ export default {
 </script>
 
 <style scoped>
-.book-img {
-  max-width: 80px;
-  height: auto;
-}
-.adjustment {
-  margin-top: 8px;
-}
 </style>

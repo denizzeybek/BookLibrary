@@ -1,63 +1,56 @@
 <template>
-  <div
-    class="
-      home
-      bg-purple-100
-      h-screen
-      w-screen
-      flex
-      items-center
-      justify-around
-      flex-wrap
-    "
-  >
-    <card
-      isBookList="false"
-      isMain="false"
-      class="w-1/2 h-96"
-      titleText="Add New Book"
-    >
-      <div class="min-w-72">
-        <FormulateForm
-          @submit="handleSubmit"
-          name="addBook"
-          v-model="formValues"
-        >
-          <FormulateInput v-for="input in inputsArray" :key="input.id"
-            class="form-custom-inputs"
-            type="text"
-            validation="required"
-            :name="input.name"
-            :placeholder="input.placeholder"
-          /> 
-          <action-button
-            class="bg-sky-500 hover:bg-sky-900 text-white py-2 my-6"
-            buttonText="Save"
-          />
-        </FormulateForm>
-      </div>
-    </card>
+  <div class="h-screen bg-gray-600 flex justify-center items-center">
+    <div class="w-screen">
+      <main-card class="py-5">
+        <headerSection headerText="Add New Book" />
+
+        <div class="form-section w-11/12 flex justify-center">
+          <FormulateForm
+            @submit="handleSubmit"
+            name="addBook"
+            v-model="formValues"
+            class="w-11/12 flex justify-center flex-col my-5"
+          >
+            <FormulateInput
+              v-for="input in inputsArray"
+              :key="input.id"
+              class="form-custom-inputs text-white justify-center"
+              type="text"
+              validation="required"
+              :name="input.name"
+              :placeholder="input.placeholder"
+              style="margin-left: 40px"
+            /> 
+            <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
+              <general-button buttonText="Save"></general-button>
+            </div>
+          </FormulateForm>
+        </div>
+      </main-card>
+    </div>
   </div>
 </template>
 
 <script>
-import card from "@/components/cards/card.vue";
-import actionButton from "@/components/buttons/actionButton.vue";
+import mainCard from "@/components/cards/mainCard";
+import generalButton from "@/components/buttons/generalButton.vue";
+import headerSection from "@/components/header/header.vue";
 import uuid4 from "@/assets/js/uuid4";
+
 export default {
-  name: "AddNewBook",
   components: {
-    actionButton,
-    card,
+    mainCard,
+    generalButton,
+    headerSection,
   },
   data() {
     return {
       formValues: {},
       inputsArray: [
-        {name:"bookName", placeholder:"Please Enter Book Name*"},
-        {name:"author", placeholder:"Please Enter Author Name*"},
-        {name:"imageUrl", placeholder:"Please Enter Book Image URL*"},
-      ]
+        { name: "bookName", placeholder: "Please Enter Book Name*" },
+        { name: "author", placeholder: "Please Enter Author Name*" },
+        { name: "imageUrl", placeholder: "Please Enter Book Image URL*" },
+      ],
     };
   },
   methods: {
@@ -69,16 +62,15 @@ export default {
         vm: this,
         formObject,
       });
-    }, 
+    },
   },
 };
 </script>
 
 <style scoped>
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 640px) {
   .form-custom-inputs {
-    width: 150px;
-    font-size: 11px;
+    margin-left: 0px !important;
   }
 }
 </style>

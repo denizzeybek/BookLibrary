@@ -1,67 +1,63 @@
 <template>
-  <div
-    class="
-      home
-      bg-purple-100
-      h-screen
-      w-screen
-      flex
-      items-center
-      justify-around
-      flex-wrap
-    "
-  >
-    <card
-      isBookList="false"
-      isMain="false"
-      class="w-1/2 h-96"
-      titleText="Get From User"
-    >
-      <div class="min-w-72">
-        <FormulateForm
-          @submit="handleSubmit"
-          name="addBook"
-          v-model="formValues"
-        >
-          <FormulateInput
-            class="form-custom-inputs"
-            name="bookName"
-            type="select"
-            :options="getBookSelectObj"
-            placeholder="Please Select a Book*"
-            validation="required"
-          />
+  <div class="h-screen bg-gray-600 flex justify-center items-center">
+    <div class="w-screen">
+      <main-card class="py-5">
+        <headerSection headerText="Get From User" />
 
-        <div
-          class="get-text-section flex items-start min-h-32 mb-2 mt-4 flex-col"
-        >
-          <p v-if="getAddress" class="text-lg max-w-fit text-left">{{getAddress}}</p> 
-          <p v-else class="text-lg">This book is in library...</p> 
+        <div class="form-section w-11/12 flex justify-center">
+          <FormulateForm
+            @submit="handleSubmit"
+            name="addBook"
+            v-model="formValues"
+          >
+            <FormulateInput
+              class="form-custom-inputs text-white"
+              name="bookName"
+              type="select"
+              :options="getBookSelectObj"
+              placeholder="Please Select a Book*"
+              validation="required"
+            />
+
+            <div
+              class="
+                get-text-section
+                flex
+                items-start
+                min-h-32
+                mb-2
+                mt-4
+                flex-col
+              "
+            >
+              <p v-if="getAddress" class="text-lg max-w-fit text-left text-white">
+                {{ getAddress }}
+              </p>
+              <p v-else class="text-lg text-white">This book is in library...</p>
+            </div>
+            <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
+              <general-button buttonText="Get From User"></general-button>
+            </div>
+          </FormulateForm>
         </div>
-        <action-button 
-          class="bg-sky-500 hover:bg-sky-900 text-white py-2 my-6"
-          buttonText="Get From User"
-        />
-        </FormulateForm>
-      </div>
-    </card>
+      </main-card>
+    </div>
   </div>
 </template>
 
 <script>
-import card from "@/components/cards/card.vue";
-import actionButton from "@/components/buttons/actionButton.vue";
-
+import mainCard from "@/components/cards/mainCard";
+import headerSection from "@/components/header/header.vue";
+import generalButton from "@/components/buttons/generalButton.vue";
 import { mapGetters } from "vuex";
-
 export default {
-  name: "AddNewBook",
   components: {
-    actionButton,
-    card,
+    mainCard,
+    generalButton,
+    headerSection,
   },
   async created() {
-    await this.$store.dispatch("getUserListAction")
+    await this.$store.dispatch("getUserListAction");
     await this.$store.dispatch("getBookListAction");
     await this.$store.dispatch("getBookSelectAction");
   },
@@ -70,20 +66,16 @@ export default {
       formValues: {},
     };
   },
-  methods: { 
+  methods: {
     async handleSubmit() {
-    console.log("here")
+      console.log("here");
 
-      let formObject = this.formValues; 
+      let formObject = this.formValues;
       await this.$store.dispatch("findUserAddressAction", formObject.bookName);
     },
   },
   computed: {
-    ...mapGetters([
-        "getBookSelectObj", 
-        "getBookId",
-        "getAddress"
-    ]),
+    ...mapGetters(["getBookSelectObj", "getBookId", "getAddress"]),
   },
 };
 </script>

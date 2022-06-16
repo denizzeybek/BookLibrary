@@ -154,7 +154,7 @@ const actions = {
     });
     if (data) {
       console.log(data, error);
-      vm.$toastr("success", `Status updated`, "UPDATED!");
+      // vm.$toastr("success", `Status updated`, "UPDATED!");
       commit("updateUserList", id);
     }
     if (error) {
