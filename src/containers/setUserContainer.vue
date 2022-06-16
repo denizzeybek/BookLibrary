@@ -1,39 +1,38 @@
 <template>
-  <div class="h-screen bg-gray-600 flex justify-center items-center">
-    <div class="w-screen">
-      <main-card class="py-5">
-        <headerSection headerText="Set To User" />
+  <default-layout>
+    <main-card class="py-5">
+      <headerSection headerText="Set To User" />
 
-        <div class="form-section w-11/12 flex justify-center">
-          <FormulateForm
-            @submit="handleSubmit"
-            name="setToUser"
-            v-model="formValues"
-            class="w-1/2 flex justify-center flex-col my-5"
-          >
-            <FormulateInput
-              v-for="input in inputsArray"
-              :key="input.id"
-              class="form-custom-inputs text-white"
-              validation="required"
-              :options="getBookSelectObj"
-              :name="input.name"
-              :type="input.type"
-              :placeholder="input.placeholder"
-            />
-            <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
-              <general-button buttonText="Set To User"></general-button>
-            </div>
-          </FormulateForm>
-        </div>
-      </main-card>
-    </div>
-  </div>
+      <div class="form-section w-11/12 flex justify-center">
+        <FormulateForm
+          @submit="handleSubmit"
+          name="setToUser"
+          v-model="formValues"
+          class="w-1/2 flex justify-center flex-col my-5"
+        >
+          <FormulateInput
+            v-for="input in inputsArray"
+            :key="input.id"
+            class="form-custom-inputs text-white"
+            validation="required"
+            :options="getBookSelectObj"
+            :name="input.name"
+            :type="input.type"
+            :placeholder="input.placeholder"
+          />
+          <div class="flex mt-4 space-x-3 lg:mt-6 justify-center">
+            <general-button buttonText="Set To User"></general-button>
+          </div>
+        </FormulateForm>
+      </div>
+    </main-card>
+  </default-layout>
 </template>
 
 <script>
 import mainCard from "@/components/card/mainCard";
 import headerSection from "@/components/header/header.vue";
+import defaultLayout from "@/layout/defaultLayout.vue";
 import generalButton from "@/components/button/generalButton.vue";
 import { mapGetters } from "vuex";
 import uuid4 from "@/assets/js/uuid4";
@@ -41,6 +40,7 @@ export default {
   components: {
     mainCard,
     generalButton,
+    defaultLayout,
     headerSection,
   },
   async created() {

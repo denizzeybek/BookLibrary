@@ -1,47 +1,47 @@
 <template>
-  <div class="h-screen bg-gray-600 flex justify-center items-center">
-    <div class="w-screen">
-      <main-card class="py-5" style="position: relative">
-        <headerSection headerText="Book List" />
+  <default-layout>
+    <main-card class="py-5" style="position: relative">
+      <headerSection headerText="Book List" />
 
-        <div class="flow-root w-11/12 flex justify-center">
-          <ul role="list" class="divide-y divide-gray-700">
-            <list-item
-              @removeFromUser="removeItemFromUser($event)"
-              @deleteItem="deleteBookItem($event)"
-              v-for="book in pageOfItems"
-              :key="book.id"
-              :itemObject="book"
-            ></list-item>
-          </ul>
-          <div
-            class="flex items-center justify-center w-full"
-            style="position: absolute; bottom: 10; right: 0"
-          >
-            <!-- <custom-pagination/> -->
-            <jw-pagination
-              :maxPages="5"
-              :pageSize="3"
-              :items="getBookList"
-              @changePage="onChangePage"
-              style="color: white"
-            ></jw-pagination>
-          </div>
+      <div class="flow-root w-11/12 flex justify-center">
+        <ul role="list" class="divide-y divide-gray-700">
+          <list-item
+            @removeFromUser="removeItemFromUser($event)"
+            @deleteItem="deleteBookItem($event)"
+            v-for="book in pageOfItems"
+            :key="book.id"
+            :itemObject="book"
+          ></list-item>
+        </ul>
+        <div
+          class="flex items-center justify-center w-full"
+          style="position: absolute; bottom: 10; right: 0"
+        >
+          <!-- <custom-pagination/> -->
+          <jw-pagination
+            :maxPages="5"
+            :pageSize="3"
+            :items="getBookList"
+            @changePage="onChangePage"
+            style="color: white"
+          ></jw-pagination>
         </div>
-      </main-card>
-    </div>
-  </div>
+      </div>
+    </main-card>
+  </default-layout>
 </template>
 
 <script>
 import mainCard from "@/components/card/mainCard";
 import headerSection from "@/components/header/header.vue";
 import customPagination from "@/components/pagination/pagination.vue";
+import defaultLayout from "@/layout/defaultLayout.vue";
 import listItem from "@/components/listItem/listItem.vue";
 import { mapGetters } from "vuex";
 export default {
   components: {
     mainCard,
+    defaultLayout,
     headerSection,
     customPagination,
     listItem,
