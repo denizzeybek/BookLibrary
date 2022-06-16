@@ -1,8 +1,13 @@
 ```
-This application is a library management system. You can add or delete new books in the system.
-You can assign a book to the user. In this way, you can view the person who received the book. You can also drag the book assigned to the user from the list of books to the library.
+This application is a library management system. 
+You can add or delete new books in the system.
+You can assign a book to the user. In this way, 
+you can view the person who received the book. 
+You can also drag the book assigned to the user 
+from the list of books to the library.
 
-In this application, data is kept on json-server. So you need to run json-server to use the application efficiently.
+In this application, data is kept on json-server. 
+So you need to run json-server to use the application efficiently.
 ```
 ## Project setup
 ```
