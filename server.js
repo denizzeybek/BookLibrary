@@ -4,10 +4,10 @@ const path = require('path')
  
 const app = express()
  
-//here we are configuring dist to serve app files
+// //here we are configuring dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
  
-// this * route is to serve project on different page routes except root `/`
+// // this * route is to serve project on different page routes except root `/`
 app.get(/.*/, function (req, res) {
     res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
@@ -15,3 +15,15 @@ app.get(/.*/, function (req, res) {
 const port = process.env.PORT || 8080
 app.listen(port)
 console.log(`app is listening on port: ${port}`)
+
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('dataService/db.json');
+const middlewares = jsonServer.defaults();
+// const jsonPort = process.env.PORT || 3000;
+const jsonPort = process.env.SERVER_PORT || 3000;
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(jsonPort);
