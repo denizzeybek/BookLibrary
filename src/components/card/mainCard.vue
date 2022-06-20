@@ -19,7 +19,7 @@ export default {};
 @media only screen and (max-width: 640px) {
     .card-container{
       width:100vw;
-      height:50vh;
+      height:55vh;
       display:flex;align-items:center;
       justify-content:center;
     }
